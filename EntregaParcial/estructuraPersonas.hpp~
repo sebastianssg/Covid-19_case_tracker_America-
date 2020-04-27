@@ -1,0 +1,21 @@
+#ifndef _ESTRUCTURAPERSONAS_HPP
+#define _ESTRUCTURAPERSONAS_HPP
+#include <string>
+//cajitas dentro de la estructura es decir la persona
+struct person
+{
+  //edad
+  int age;
+  //genero
+  bool gender;
+  //locacion
+  string location;
+  // idUnico
+  int id;
+  //apuntador al siguiente
+  person* next;
+  //apuntador al padre
+  person* parent;
+}
+
+#endif
