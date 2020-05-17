@@ -158,8 +158,6 @@ void GenderMap::clear(){
 
 }
 
-
-
 //Constructor
 GenderMap::GenderMap(){
   
@@ -286,7 +284,7 @@ class BinLoc{
 private:
   //El primer elemento que se introduce
   nodeLoc* root;
-  //Funcion que muetra los atributos de un node
+  //Funcion que muestra los atributos de un node
   void displayNode(nodeLoc* pNode, int count);
   //Funcion que permite insertar un nodo dado un idUnico, edad, el padre y el nodo base
   void insertNode(nodeLoc* &pNode, int pKey, int pIdUnico, nodeLoc* pParent);
