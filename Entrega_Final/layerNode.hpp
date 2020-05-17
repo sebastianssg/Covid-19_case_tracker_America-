@@ -41,11 +41,11 @@ private:
   int table_size;
   int count;
 
-  //Se encarga de volver a acomodar a todos los eleemntos
+  //Se encarga de volver a acomodar a todos los elemntos
   void reHash();
   //La funcion hash que se tiene
   int hash_fun(int key);
-  //para buscar en el bucket
+  //Para buscar en el bucket
   nodeGender* search_bucket(int i, int key);
 public:
   //Constructor y destructor de la clase
@@ -194,21 +194,19 @@ void GenderMap::insert(int pKey, bool value){
       nodeGender*temporal = new nodeGender;
       temporal->value = value;
       temporal->key = pKey;
-      //el next ahora es el primero del tabl
+      //El next ahora es el primero del table
       temporal->next = table[entra];
-      //lo introduzco al inicio del bucket
+      //Se introduce al inicio del bucket
       table[entra]= temporal;
       count++;
     }
   else if(esta == nullptr && count == (2* table_size))
     {
-      //hay que hacer el rehash
       reHash();
       insert(pKey, value);
     }
   else
     {
-      //Remplaza
       
       esta->value=value;
     }
